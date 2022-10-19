@@ -12,6 +12,11 @@ This a repo that contains a variety of technical interview challenges (and links
 
 ---
 
+## My Challenges
+
+Easy - [Height Checker](https://leetcode.com/problems/height-checker)
+Medium - [Find The Winner Of The Circular](https://leetcode.com/problems/find-the-winner-of-the-circular-game)
+
 ## Licensing
 1. All content is licensed under a CC-BY-NC-SA 4.0 license.
 2. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
