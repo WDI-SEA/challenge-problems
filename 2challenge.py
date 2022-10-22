@@ -43,4 +43,4 @@ def greedy(cents):
     print(f"Here's {total_coins} coins")
     print(msg_quarters, msg_dimes, msg_nickles, msg_pennies)
 
-greedy(666)
+greedy(5)
