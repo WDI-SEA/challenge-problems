@@ -42,7 +42,7 @@ def circular_list(friends, count):
     current_friend = friend_list.head
 
     while len(friend_list) > 1:
-            
+        pass
     
 def circular_game(friends, k, index = 0):
     k -= 1
