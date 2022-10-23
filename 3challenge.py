@@ -29,3 +29,27 @@ print(camel_case("The_Stealth_warrior"))
 
 # bonus -- do the reverse
 # take camel cased input and return underscores
+def underscorerer(input):
+    # convert input to list of characters
+    char_list = list(input)
+    # empty list to append characters (python will hang if I try to insert into a list while looping over it)
+    new_char_list = list()
+    # iterate over character list
+    for i, char in enumerate(char_list):
+        # make sure our first letter is lower cased and don't add anything before it
+        if i == 0:
+            char = char.lower()
+        # if the character is uppercased
+        elif char.isupper():
+            # convert it to lower case
+            char = char.lower()
+            # append an underscore to our new list before the character
+            new_char_list.append("_")
+        # append each character to our new list
+        new_char_list.append(char)
+
+    # return a stringified version of our list
+    return "".join(new_char_list)
+
+print(underscorerer("myCamelCasedVariable"))
+print(underscorerer("ThisOneIsPascalCased"))
