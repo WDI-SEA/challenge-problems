@@ -47,18 +47,18 @@
 //     return futureDay
 // }
 // console.log(daysOfWeek(day[1], 9))
-function dayOfWeek(day, k) {
-    const days = [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-    ];
-    const index = days.indexOf(day);
-    return days[(index + k) % 7];
-}
+// function dayOfWeek(day, k) {
+//     const days = [
+//         'Monday',
+//         'Tuesday',
+//         'Wednesday',
+//         'Thursday',
+//         'Friday',
+//         'Saturday',
+//         'Sunday',
+//     ];
+//     const index = days.indexOf(day);
+//     return days[(index + k) % 7];
+// }
 
-console.log(dayOfWeek("Monday", 24))
+// console.log(dayOfWeek("Monday", 24))
