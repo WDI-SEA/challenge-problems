@@ -1,0 +1,24 @@
+
+
+testArr = ['hello', 'yes', 'hello', 'no', 'yes', 'hi', 'hello']
+
+def findTheString(arr, value):
+    tracker = {}
+
+    tracker = {
+        'hello': 1
+        'yes': 1
+    }
+
+    for i in arr:
+        for index in tracker:
+            if(i == index):
+                tracker[index] += 1
+            else:
+                tracker.append(i)
+
+    for key in tracker:
+        
+            
+
+print(findTheString(testArr, 2))

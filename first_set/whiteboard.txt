@@ -1,0 +1,16 @@
+Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+Return the running sum of nums.
+
+testArr = [1, 2, 3, 4]
+
+def running_sum(arr):
+    temp_sum = 0
+    sumArr = []
+
+    for i in testArr:
+        temp_sum += i
+        sumArr.push(temp_sum)
+    
+    return sumArr
+
+print(running_sum(testArr))
