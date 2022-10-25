@@ -10,11 +10,14 @@ array_diff([1,2,2,2,3],[2]) == [1,3]
 '''
 
 
-def array_diff(a, b):
-    if a == []:
-        return a
+def array_diff(list, input):
+    if list == []:
+        return list
     else:
-        for i in b:
-            while i in a:
-                a.remove(i)
-        return a
+        for num in input:
+            while num in list:
+                list.remove(num)
+        return list
+
+
+print(array_diff([1,2,2,2,2,2,4,6,8,9,9], [2,9]))
