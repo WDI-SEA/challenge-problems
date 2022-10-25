@@ -56,3 +56,12 @@ def unique_in_order(string):
 
 unique_in_order('AAAABBBCCDAABBB')
 
+
+def convert(string):
+    list1 = []
+    list1[:0] = string
+    return list1
+
+
+string="abdndbwobf"
+print(convert(string))
