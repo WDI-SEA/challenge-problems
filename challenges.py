@@ -51,3 +51,33 @@ fizzbizz(num)
 
 
 
+# From Git-repo
+
+# Direction:
+# Given an amount of change, determine the minimum number of coins required to make that change
+# Examples:
+
+# greedy(65) --> 4 `(2 quarters, 1 dime, 1 nickle)`
+# greedy(5) --> 1 `(1 nickle)`
+
+num = int(input("enter change amount"))
+def change(num):
+    # given a number 
+    if num == 0:
+        return 0
+    # if num  > 25 then 
+    if num >= 25:
+        qtr_results = num //25 #returns how many quarters used
+        qtr_remainder = num % 25 # returns what remains 
+        return qtr_results
+    #  if not then remainder and div that by 10 % ==0 then return answer
+    if num >= 10:
+    # div by 10
+        dime_results = qtr_remainder //10 
+        dime_remainder = num % 10
+    # if not then dived the rem by 5
+    if num >= 5:
+    # div by 5
+        nickel_results = dime_remainder //5 
+        remainder = num % 1 
+   
