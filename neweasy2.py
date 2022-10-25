@@ -1,3 +1,5 @@
+https://levelup.gitconnected.com/leetcode-75-level-1-running-sum-of-1d-array-f983c068c36b
+
 https://dev.to/seanpgallivan/solution-running-sum-of-1d-array-34na
 
 Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
