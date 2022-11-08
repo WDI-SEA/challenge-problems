@@ -10,7 +10,7 @@
 change = int(input("How much change do you need? \n"))
 
 def change_calc(change, quarters=0, dimes=0, nickles=0, pennies=0):
-
+    # base case
     if change == 0:
         return print(f"Output: {quarters+dimes+nickles+pennies} : {quarters} quarters, {dimes} dimes, {nickles} nickles, and {pennies} pennies")
 
@@ -37,4 +37,36 @@ def change_calc(change, quarters=0, dimes=0, nickles=0, pennies=0):
         change = 0
         change_calc(change, quarters, dimes, nickles, pennies)          
 
-change_calc(change)
+# change_calc(change)
+
+def coin_calc(change, qtrs=0, dimes=0, nickles=0, pennies=0):
+    if change >= 25:
+        qtrs = change // 25
+        mod = change % 25
+        if mod == 0:
+            return print(qtrs)
+        else:
+            coin_calc(mod, qtrs, dimes, nickles, pennies)
+    
+    elif change >= 10:
+        dimes = change // 10
+        mod = change % 10
+        if mod == 0:
+            return print(qtrs + dimes)
+        else:
+            coin_calc(mod, qtrs, dimes, nickles, pennies)
+    
+    else:
+        nickles = change // 5
+        mod = change % 5
+        pennies = mod
+        return print(qtrs + dimes + nickles + pennies)
+
+coin_calc(change)
+    
+
+
+    
+
+
+
