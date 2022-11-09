@@ -44,7 +44,7 @@ function phoneLetters (input) {
             let arrTemp = [char]
             for (x in output) {
                 arrTemp.push("" + output[x] + char)
-                console.log(arrTemp)
+                // console.log(arrTemp)
             }
             output = output.concat(arrTemp)
             index++
