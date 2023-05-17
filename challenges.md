@@ -10,6 +10,25 @@ You are given a range of values, and you must write an algorithm to guess a rand
 
 After every time you guess, you're told if you're right, too high, or too low.
 
+def binary_search(array, secret):
+    first = 0
+    last = len(array) - 1
+
+    while first <= last:
+        mid = (first + last) // 2
+
+        if array[mid] == secret:
+            return f'{secret} found at array index {mid}'
+
+        if array[mid] > secret:
+            last = mid - 1
+        else:
+            first = mid + 1
+
+    return f'{secret} not found'
+
+print(binary_search(array, 8))
+
 ---
 
 Write an algorithm to flatten a multi-dimensional array:
@@ -18,6 +37,21 @@ Write an algorithm to flatten a multi-dimensional array:
 vec = [[1,2,3], [4,5,6], [7,8,9]]
 => [1,2,3,4,5,6,7,8,9]
 ```
+
+vec = [[1,2,3], [4,5,6], [7,8,9]]
+
+def flatten(array):
+    container = []
+    for i in array:
+        for j in i:
+            container.append(j)
+            
+
+    return container
+
+print(flatten(vec))
+
+
 ---
 
 Write a program that prints the day of the week given a number of days and weeks.
@@ -30,6 +64,43 @@ Answer the following questions:
 * Today is Tuesday - What day of the week will it be in 4 weeks and 2 days?
 * Today is Friday - What day of the week will it be in 294 days?
 * Bonus: What month and day is it 73 days after October 31st 2018?
+
+days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+
+def new_index(array, day):
+    if day in array:
+        current_index = array.index(day)
+        shifted_array = array[current_index:] + array[:current_index]
+        return shifted_array
+    return array
+
+days = new_index(days, 'wednesday')
+print(days)
+
+def what_day(today, number):
+    new_day_index = new_index(days, today)
+    future_day = number % 7
+    
+    def find_day(future_day):
+        match future_day:
+            case 0:
+                return new_day_index[0]
+            case 1:
+                return new_day_index[1]
+            case 2:
+                return new_day_index[2]
+            case 3:
+                return new_day_index[3]
+            case 4:
+                return new_day_index[4]
+            case 5:
+                return new_day_index[5]
+            case 6:
+                return new_day_index[6]
+            
+    return find_day(future_day)
+
+print(what_day('wednesday', 22))
 
 ---
 
@@ -45,6 +116,14 @@ reverse('hello') === 'olleh'
 reverse('Greetings!') === '!sgniteerG'
 ```
 
+def reverse_string(string):
+    new_string = ''
+    for _ in string:
+        new_string = _ + new_string
+    return new_string
+    
+print(reverse_string('hello'))
+
 ---
 
 Directions:
@@ -59,6 +138,22 @@ Examples:
 palindrome("abba") === true
 palindrome("abcdefg") === false
 ```
+def reverse_string(string):
+    new_string = ''
+    for _ in string:
+        new_string = _ + new_string
+    return new_string
+    
+print(reverse_string('hello'))
+
+
+def palindrone(string):
+    if string == reverse_string(string):
+        return True
+    else:
+        return False
+
+print(palindrone('notabba'))  
 
 ---
 
