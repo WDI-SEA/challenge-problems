@@ -13,7 +13,6 @@ After every time you guess, you're told if you're right, too high, or too low.
 ---
 # 2
 Write an algorithm to flatten a multi-dimensional array:
-
 ```
 vec = [[1,2,3], [4,5,6], [7,8,9]]
 => [1,2,3,4,5,6,7,8,9]
