@@ -49,3 +49,31 @@
 
 # output1 = count_occurrences(string_list1, queries1)
 # print(output1) 
+
+
+#Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+#create a solution class
+    #use a hash table to check if ints are duplicates
+    #creating a ducplicate check that passes self and num and returns a bool
+        #hash the value
+            #for loop to itereate over each element and add it to the hash table
+            #if value is inside of hash table return true.
+
+class Solution:
+    def duplicate_check(self, nums: list[int]) -> bool:
+        hashset = set()
+        for _ in nums:
+            if _ in hashset:
+                return True
+            hashset.add(_)
+        return False
+
+solution = Solution()  
+nums = [1,2,3,4,4,5,6,7]
+result = solution.duplicate_check(nums)
+print(result)
+
+
+
+
